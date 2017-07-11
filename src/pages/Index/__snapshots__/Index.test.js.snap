@@ -1,9 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Index page should call getTodos 1`] = `<div />`;
+exports[`Index page should call getTodos 1`] = `
+<div>
+  <div>
+    <input
+      type="text"
+      value=""
+    />
+    <button
+      type="button"
+    >
+      Add task
+    </button>
+  </div>
+  <div
+    class="jt-List"
+  />
+</div>
+`;
 
 exports[`Index page should render 1`] = `
 <div>
-  Index
+  <div>
+    <input
+      type="text"
+      value=""
+    />
+    <button
+      type="button"
+    >
+      Add task
+    </button>
+  </div>
+  <div
+    class="jt-List"
+  />
 </div>
 `;

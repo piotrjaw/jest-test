@@ -4,7 +4,13 @@ const initialState = { todos: [] };
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case TYPES.GET_TODOS_SUCCESS:
+      return {
+        todos: action.data
+      }
     default:
-      return state;
+      return {
+        todos: state.todos || []
+      };
   }
 };

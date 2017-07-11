@@ -1,17 +1,185 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Row should call onCheckClick with _id and negation of current checked status when clicked 1`] = `<div />`;
+exports[`Row should call onCheckClick with _id and negation of current checked status when clicked 1`] = `
+<div
+  class="jt-Row"
+>
+  <div
+    class="jt-Row__text"
+    style="text-decoration:none;"
+  >
+    text1
+  </div>
+  <button
+    class="jt-Row__check-button"
+  >
+    Check
+  </button>
+  <button
+    class="jt-Row__delete-button"
+  >
+    Delete
+  </button>
+</div>
+`;
 
-exports[`Row should call onDeleteClick with _id when clicked 1`] = `<div />`;
+exports[`Row should call onDeleteClick with _id when clicked 1`] = `
+<div
+  class="jt-Row"
+>
+  <div
+    class="jt-Row__text"
+    style="text-decoration:none;"
+  >
+    text1
+  </div>
+  <button
+    class="jt-Row__check-button"
+  >
+    Check
+  </button>
+  <button
+    class="jt-Row__delete-button"
+  >
+    Delete
+  </button>
+</div>
+`;
 
-exports[`Row should handle a checked entry 1`] = `<div />`;
+exports[`Row should handle a checked entry 1`] = `
+<div
+  class="jt-Row"
+>
+  <div
+    class="jt-Row__text"
+    style="text-decoration:line-through;"
+  >
+    text1
+  </div>
+  <button
+    class="jt-Row__check-button"
+  >
+    Uncheck
+  </button>
+  <button
+    class="jt-Row__delete-button"
+  >
+    Delete
+  </button>
+</div>
+`;
 
-exports[`Row should handle a unchecked entry 1`] = `<div />`;
+exports[`Row should handle a unchecked entry 1`] = `
+<div
+  class="jt-Row"
+>
+  <div
+    class="jt-Row__text"
+    style="text-decoration:none;"
+  >
+    text1
+  </div>
+  <button
+    class="jt-Row__check-button"
+  >
+    Check
+  </button>
+  <button
+    class="jt-Row__delete-button"
+  >
+    Delete
+  </button>
+</div>
+`;
 
-exports[`Row should render 1`] = `<div />`;
+exports[`Row should render 1`] = `
+<div
+  class="jt-Row"
+>
+  <div
+    class="jt-Row__text"
+    style="text-decoration:none;"
+  >
+    text1
+  </div>
+  <button
+    class="jt-Row__check-button"
+  >
+    Check
+  </button>
+  <button
+    class="jt-Row__delete-button"
+  >
+    Delete
+  </button>
+</div>
+`;
 
-exports[`Row should render a \`Delete\` button 1`] = `<div />`;
+exports[`Row should render a \`Delete\` button 1`] = `
+<div
+  class="jt-Row"
+>
+  <div
+    class="jt-Row__text"
+    style="text-decoration:none;"
+  >
+    text1
+  </div>
+  <button
+    class="jt-Row__check-button"
+  >
+    Check
+  </button>
+  <button
+    class="jt-Row__delete-button"
+  >
+    Delete
+  </button>
+</div>
+`;
 
-exports[`Row should render a button 1`] = `<div />`;
+exports[`Row should render a button 1`] = `
+<div
+  class="jt-Row"
+>
+  <div
+    class="jt-Row__text"
+    style="text-decoration:none;"
+  >
+    text1
+  </div>
+  <button
+    class="jt-Row__check-button"
+  >
+    Check
+  </button>
+  <button
+    class="jt-Row__delete-button"
+  >
+    Delete
+  </button>
+</div>
+`;
 
-exports[`Row should render a to-do text 1`] = `<div />`;
+exports[`Row should render a to-do text 1`] = `
+<div
+  class="jt-Row"
+>
+  <div
+    class="jt-Row__text"
+    style="text-decoration:none;"
+  >
+    text1
+  </div>
+  <button
+    class="jt-Row__check-button"
+  >
+    Check
+  </button>
+  <button
+    class="jt-Row__delete-button"
+  >
+    Delete
+  </button>
+</div>
+`;

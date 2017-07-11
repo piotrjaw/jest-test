@@ -9,12 +9,27 @@ const setupWrapper = (config = {}) => {
     Component: List,
     method,
     props: {
+      entries: [
+        {
+          text: 'text1',
+          checked: false,
+          id: 1
+        },
+        {
+          text: 'text2',
+          checked: true,
+          id: 2
+        }
+      ],
       ...props
     }
   });
 };
 
 let wrapper;
+
+jest
+  .mock('../Row', () => 'Row');
 
 beforeEach(() => {
   wrapper = setupWrapper();
@@ -27,11 +42,14 @@ afterEach(() => {
 
 describe('List component', () => {
   it('should render', () => {
+    expect(wrapper.exists()).toBe(true);
   });
 
   it('should have an appropriate class name', () => {
+    expect(wrapper.find('.jt-List').exists()).toBe(true);
   });
 
   it('should render an appropriate number of rows', () => {
+    expect(wrapper.find('Row').length).toEqual(2);
   });
 });

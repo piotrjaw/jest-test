@@ -19,6 +19,11 @@ const setupWrapper = (config = {}) => {
 
 let wrapper;
 
+jest
+  .mock('./Index.actions', () => ({
+    getTodos: jest.fn()
+  }));
+
 beforeEach(() => {
   wrapper = setupWrapper();
 });
@@ -31,8 +36,11 @@ afterEach(() => {
 
 describe('Index page', () => {
   it('should render', () => {
+    expect(wrapper.exists()).toBe(true)
   });
 
   it('should call getTodos', () => {
+    wrapper = setupWrapper({ method: mount });
+    expect(require('./Index.actions').getTodos).toHaveBeenCalledTimes(1);
   });
 });
