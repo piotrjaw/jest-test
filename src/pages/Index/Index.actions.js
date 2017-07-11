@@ -1,0 +1,47 @@
+import * as TYPES from './Index.types';
+import { del, get, put, post } from '../../helpers/request';
+
+const createTodoPending = () => ({
+  type: TYPES.CREATE_TODO_PENDING
+});
+
+const createTodoSuccess = () => ({
+  type: TYPES.CREATE_TODO_SUCCESS
+});
+
+const deleteTodoPending = () => ({
+  type: TYPES.DELETE_TODO_PENDING
+});
+
+const deleteTodoSuccess = () => ({
+  type: TYPES.DELETE_TODO_SUCCESS
+});
+
+const getTodosPending = () => ({
+  type: TYPES.GET_TODOS_PENDING
+});
+
+export const getTodosSuccess = (data) => ({
+  type: TYPES.GET_TODOS_SUCCESS,
+  data
+});
+
+const updateTodoPending = () => ({
+  type: TYPES.UPDATE_TODO_PENDING
+});
+
+const updateTodoSuccess = () => ({
+  type: TYPES.UPDATE_TODO_SUCCESS
+});
+
+export const createTodo = (createObj) => (dispatch) => {
+}
+
+export const deleteTodo = (deleteObj) => (dispatch) => {
+};
+
+export const getTodos = () => (dispatch) => {
+};
+
+export const updateTodo = (updateObj) => (dispatch) => {
+};

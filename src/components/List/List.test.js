@@ -24,3 +24,14 @@ afterEach(() => {
   expect(toJSON(wrapper.render())).toMatchSnapshot();
   wrapper = null;
 });
+
+describe('List component', () => {
+  it('should render', () => {
+  });
+
+  it('should have an appropriate class name', () => {
+  });
+
+  it('should render an appropriate number of rows', () => {
+  });
+});

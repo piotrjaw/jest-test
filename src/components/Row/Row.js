@@ -1,9 +1,14 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class Row extends PureComponent {
-  render() {
-    return (
-      <div />
-    );
-  }
+const Row = () => {
+
+  return (
+    <div />
+  );
 }
+
+Row.PropTypes = {
+};
+
+export default Row;

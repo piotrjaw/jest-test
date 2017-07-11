@@ -2,18 +2,17 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as IndexActions from './Index.actions';
-import List from '../../components/List';
 
 class IndexComponent extends PureComponent {
   render() {
     return (
-      <div>Index</div>
+      <div />
     );
   }
 }
 
 const mapStateToProps = ({ index }) => ({
-
+  todos: index.todos
 });
 
 const mapDispatchToProps = (dispatch) => ({

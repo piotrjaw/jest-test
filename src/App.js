@@ -6,7 +6,6 @@ import {
   Route
 } from 'react-router-dom';
 import Index from './pages/Index';
-import ToDo from './pages/ToDo';
 
 class App extends PureComponent {
   render() {
@@ -16,7 +15,6 @@ class App extends PureComponent {
           <Router>
             <div>
               <Route exact path="/" component={ Index } />
-              <Route path="/:id" component={ ToDo } />
             </div>
           </Router>
         </div>
