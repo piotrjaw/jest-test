@@ -1,7 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input component should handle clear call 1`] = `<input />`;
+exports[`Input component should handle clear call 1`] = `
+<input
+  type="text"
+  value=""
+/>
+`;
 
-exports[`Input component should handle onChange event 1`] = `<input />`;
+exports[`Input component should handle onChange event 1`] = `
+<input
+  type="text"
+  value="test"
+/>
+`;
 
-exports[`Input component should render 1`] = `<input />`;
+exports[`Input component should render 1`] = `
+<input
+  type="text"
+  value=""
+/>
+`;

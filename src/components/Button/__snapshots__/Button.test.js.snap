@@ -1,9 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button component should call onClick when clicked 1`] = `<button />`;
+exports[`Button component should call onClick when clicked 1`] = `
+<button
+  type="button"
+/>
+`;
 
-exports[`Button component should render 1`] = `<button />`;
+exports[`Button component should render 1`] = `
+<button
+  type="button"
+/>
+`;
 
-exports[`Button component should render HTML children 1`] = `<button />`;
+exports[`Button component should render HTML children 1`] = `
+<button
+  type="button"
+>
+  <span>
+    Test
+  </span>
+</button>
+`;
 
-exports[`Button component should render text children 1`] = `<button />`;
+exports[`Button component should render text children 1`] = `
+<button
+  type="button"
+>
+  Test
+</button>
+`;

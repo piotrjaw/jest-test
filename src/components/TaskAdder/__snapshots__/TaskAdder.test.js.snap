@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TaskAdder component should handle input change 1`] = `<div />`;
+exports[`TaskAdder component should handle button click 1`] = `
+<div>
+  <input />
+  <button>
+    Add task
+  </button>
+</div>
+`;
 
-exports[`TaskAdder component should render 1`] = `<div />`;
+exports[`TaskAdder component should handle input change 1`] = `
+<div>
+  <input />
+  <button>
+    Add task
+  </button>
+</div>
+`;
+
+exports[`TaskAdder component should render 1`] = `
+<div>
+  <input />
+  <button>
+    Add task
+  </button>
+</div>
+`;
