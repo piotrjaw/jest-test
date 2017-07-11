@@ -1,9 +1,11 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class Button extends PureComponent {
-  render() {
-    return (
-      <div />
-    );
-  }
-}
+const Button = () => (
+  <button />
+);
+
+Button.propTypes = {
+};
+
+export default Button;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index reducer should handle CREATE_TODO 1`] = `null`;
+
+exports[`Index reducer should handle GET_TODOS_SUCCESS 1`] = `null`;
+
+exports[`Index reducer should return the initial state 1`] = `undefined`;
