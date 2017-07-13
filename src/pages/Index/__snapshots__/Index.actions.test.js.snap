@@ -1,13 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Index actions should create a getTodosSuccess action 1`] = `undefined`;
+exports[`Index actions should create a getTodosSuccess action 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "id": "1",
+      "text": "1",
+    },
+    Object {
+      "id": "2",
+      "text": "2",
+    },
+  ],
+  "type": "Index/GET_TODOS_SUCCESS",
+}
+`;
 
-exports[`Index actions should create an action to create a todo 1`] = `undefined`;
+exports[`Index actions should create an action to create a todo 1`] = `
+Array [
+  Object {
+    "type": "Index/CREATE_TODO_PENDING",
+  },
+  Object {
+    "type": "Index/CREATE_TODO_SUCCESS",
+  },
+]
+`;
 
-exports[`Index actions should create an action to delete a todo 1`] = `undefined`;
+exports[`Index actions should create an action to delete a todo 1`] = `
+Array [
+  Object {
+    "type": "Index/DELETE_TODO_PENDING",
+  },
+  Object {
+    "type": "Index/DELETE_TODO_SUCCESS",
+  },
+]
+`;
 
-exports[`Index actions should create an action to get all the todos 1`] = `undefined`;
+exports[`Index actions should create an action to get all the todos 1`] = `
+Array [
+  Object {
+    "type": "Index/GET_TODOS_PENDING",
+  },
+  Object {
+    "data": Array [
+      Object {
+        "checked": false,
+        "id": "1",
+        "text": "1",
+      },
+      Object {
+        "checked": true,
+        "id": "2",
+        "text": "2",
+      },
+    ],
+    "type": "Index/GET_TODOS_SUCCESS",
+  },
+]
+`;
 
-exports[`Index actions should create an action to udpate a todo 1`] = `undefined`;
+exports[`Index actions should create an action to udpate a todo 1`] = `
+Array [
+  Object {
+    "type": "Index/UPDATE_TODO_PENDING",
+  },
+  Object {
+    "type": "Index/UPDATE_TODO_SUCCESS",
+  },
+]
+`;
 
-exports[`Index actions should reject on lack of text 1`] = `undefined`;
+exports[`Index actions should reject on lack of text 1`] = `null`;

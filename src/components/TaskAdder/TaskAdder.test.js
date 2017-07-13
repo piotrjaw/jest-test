@@ -50,7 +50,6 @@ describe('TaskAdder component', () => {
 
   it.skip('should handle button click', () => {
     wrapper = setupWrapper({ method: mount });
-    wrapper.ref('input').clear = jest.fn();
     wrapper.instance().handleButtonClick();
     expect(defaultProps.onButtonClick).toHaveBeenCalledTimes(1);
   });

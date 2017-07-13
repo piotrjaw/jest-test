@@ -1,7 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Index reducer should handle CREATE_TODO 1`] = `null`;
+exports[`Index reducer should handle CREATE_TODO 1`] = `
+Object {
+  "todos": Array [],
+}
+`;
 
-exports[`Index reducer should handle GET_TODOS_SUCCESS 1`] = `null`;
+exports[`Index reducer should handle CREATE_TODO 2`] = `
+Object {
+  "todos": Array [
+    Object {
+      "id": 1,
+      "text": "test1",
+    },
+  ],
+}
+`;
 
-exports[`Index reducer should return the initial state 1`] = `undefined`;
+exports[`Index reducer should handle GET_TODOS_SUCCESS 1`] = `
+Object {
+  "todos": Array [
+    Object {
+      "id": 1,
+      "text": "test1",
+    },
+    Object {
+      "id": 2,
+      "text": "test2",
+    },
+  ],
+}
+`;
+
+exports[`Index reducer should return the initial state 1`] = `
+Object {
+  "todos": Array [],
+}
+`;
+
+exports[`Index reducer should return the initial state 2`] = `
+Object {
+  "todos": Array [],
+}
+`;

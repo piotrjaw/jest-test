@@ -1,8 +1,8 @@
 import axios from 'axios';
 import httpAdapter from 'axios/lib/adapters/http';
 import nock from 'nock';
-import configureMockStore from 'redux-mock-store'
-import thunk from 'redux-thunk'
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
 import * as actions from './Index.actions';
 import * as TYPES from './Index.types';
 
@@ -14,7 +14,7 @@ const host = 'http://localhost:5000';
 axios.defaults.adapter = httpAdapter;
 axios.defaults.host = host;
 
-let action;
+let testActions;
 let store;
 
 beforeEach(() => {
@@ -23,7 +23,7 @@ beforeEach(() => {
 });
 
 afterEach(() => {
-  expect(action).toMatchSnapshot();
+  expect(testActions).toMatchSnapshot();
   nock.cleanAll();
 });
 
@@ -42,15 +42,19 @@ describe('Index actions', () => {
       { type: TYPES.CREATE_TODO_SUCCESS }
     ];
 
+    testActions = store.getActions();
+
     return store
       .dispatch(actions.createTodo(createObj))
-      .then(() => expect(store.getActions()).toEqual(expectedActions));
+      .then(() => expect(testActions).toEqual(expectedActions));
   });
 
   it('should reject on lack of text', () => {
     const createObj = {
       text: undefined
     };
+
+    testActions = null;
 
     nock(host)
       .post('/todos/', createObj)
@@ -90,9 +94,11 @@ describe('Index actions', () => {
       ] }
     ];
 
+    testActions = store.getActions();
+
     return store
       .dispatch(actions.getTodos())
-      .then(() => expect(store.getActions()).toEqual(expectedActions));
+      .then(() => expect(testActions).toEqual(expectedActions));
   });
 
   it('should create an action to udpate a todo', () => {
@@ -111,9 +117,11 @@ describe('Index actions', () => {
       { type: TYPES.UPDATE_TODO_SUCCESS }
     ];
 
+    testActions = store.getActions();
+
     return store
       .dispatch(actions.updateTodo(updateObj))
-      .then(() => expect(store.getActions()).toEqual(expectedActions));
+      .then(() => expect(testActions).toEqual(expectedActions));
   });
 
   it('should create an action to delete a todo', () => {
@@ -128,9 +136,11 @@ describe('Index actions', () => {
       { type: TYPES.DELETE_TODO_SUCCESS }
     ];
 
+    testActions = store.getActions();
+
     return store.dispatch(actions.deleteTodo(deleteObj))
       .then(() => {
-        expect(store.getActions()).toEqual(expectedActions);
+        expect(testActions).toEqual(expectedActions);
       });
   });
 
@@ -140,6 +150,9 @@ describe('Index actions', () => {
       type: TYPES.GET_TODOS_SUCCESS,
       data
     };
-    expect(actions.getTodosSuccess(data)).toEqual(expectedAction);
+
+    testActions = actions.getTodosSuccess(data);
+
+    expect(testActions).toEqual(expectedAction);
   });
 });

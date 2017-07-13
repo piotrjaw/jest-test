@@ -43,7 +43,9 @@ describe('Input component', () => {
     };
     wrapper.find('input').simulate('change', event);
     expect(defaultProps.onChange).toHaveBeenCalledTimes(1);
-    expect(wrapper.state()).toEqual({ value: 'test' });
+    expect(wrapper.state('value')).toEqual('test');
+    // above could be also done like:
+    // expect(wrapper.state()).toEqual({ value: 'test' });
     expect(event.persist).toHaveBeenCalledTimes(1);
   });
 

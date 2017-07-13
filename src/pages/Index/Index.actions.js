@@ -38,13 +38,13 @@ export const createTodo = (createObj) => (dispatch) => {
   if (!createObj.text) return Promise.reject();
   dispatch(createTodoPending());
   return post('/todos/', createObj)
-    .then((res) => dispatch(createTodoSuccess()));
+    .then(() => dispatch(createTodoSuccess()));
 }
 
 export const deleteTodo = (deleteObj) => (dispatch) => {
   dispatch(deleteTodoPending());
   return del('/todos/', deleteObj)
-    .then((res) => dispatch(deleteTodoSuccess()));
+    .then(() => dispatch(deleteTodoSuccess()));
 };
 
 export const getTodos = () => (dispatch) => {
@@ -56,5 +56,5 @@ export const getTodos = () => (dispatch) => {
 export const updateTodo = (updateObj) => (dispatch) => {
   dispatch(updateTodoPending());
   return put('/todos/', updateObj)
-    .then((res) => dispatch(updateTodoSuccess()));
+    .then(() => dispatch(updateTodoSuccess()));
 };
